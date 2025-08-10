@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kagi Translate Settings</title>
+  <style>
+    :root {
+      --bg-color: #F7F6F2;
+      /* Cream Lighter */
+      --text-color: #191919;
+      /* Graphite */
+      --header-color: #4835BC;
+      /* Purple */
+      --input-bg: #FFFFFF;
+      --input-border: #E5E5E5;
+      /* Eggshell */
+      --primary-btn-bg: #FD6820;
+      /* Orange */
+      --primary-btn-text: #F7F6F2;
+      /* Cream Lighter */
+      --status-text: #60AA55;
+      /* Grass */
+    }
+
+    body.dark-mode {
+      --bg-color: #191919;
+      /* Graphite */
+      --text-color: #F7F6F2;
+      /* Cream Lighter */
+      --header-color: #9DEBFE;
+      /* Sky */
+      --input-bg: #2a2a2a;
+      --input-border: #404040;
+      --status-text: #9DEBFE;
+      /* Sky */
+    }
+
+    body {
+      font-family: 'Lufga', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 20px;
+      min-width: 300px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    h1 {
+      color: var(--header-color);
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid var(--input-border);
+      border-radius: 5px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    #save {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      background-color: var(--primary-btn-bg);
+      color: var(--primary-btn-text);
+    }
+
+    #status {
+      margin-top: 15px;
+      text-align: center;
+      color: var(--status-text);
+      font-weight: bold;
+    }
+
+    .option-group {
+      margin-top: 20px;
+    }
+
+    .theme-selector {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .toggle-label {
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    /* The switch - a box around the slider */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 28px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked+.slider {
+      background-color: var(--primary-btn-bg);
+    }
+
+    input:focus+.slider {
+      box-shadow: 0 0 1px var(--primary-btn-bg);
+    }
+
+    input:checked+.slider:before {
+      -webkit-transform: translateX(22px);
+      -ms-transform: translateX(22px);
+      transform: translateX(22px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 28px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Kagi Translate Settings</h1>
+
+  <div class="theme-selector">
+    <label class="toggle-label">Light</label>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
+    <label class="toggle-label">Dark</label>
+  </div>
+
+  <div class="option-group">
+    <label for="default-lang">Default target language:</label>
+    <input type="text" id="default-lang" placeholder="e.g., pt_br">
+  </div>
+
+  <div class="option-group">
+    <input type="checkbox" id="specify-from-lang">
+    <label for="specify-from-lang" style="display: inline;">Specify source language</label>
+    <input type="text" id="from-lang" placeholder="e.g., en">
+  </div>
+
+  <button id="save">Save</button>
+  <p id="status"></p>
+
+  <script src="options.js"></script>
+</body>
+
+</html>
