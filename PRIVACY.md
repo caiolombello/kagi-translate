@@ -1,4 +1,4 @@
-Privacy Policy for Kagi Translate Extension
+# Privacy Policy for Kagi Translate Extension
 
 Last Updated: 09/08/2025
 
@@ -19,12 +19,14 @@ b) Content for Translation:
 The data collected is used exclusively to provide the core functionality of the extension:
 
 - Your saved settings are used to personalize your translation experience.
-- The selected text or page URL is sent directly to Kagi's public translation service (https://kagi.com/translate) to perform the translation.
+- The selected text or page URL is sent directly to Kagi's public translation service (<https://kagi.com/translate>) to perform the translation.
 
 3. Data Storage and Sharing
 
 We do not have our own servers and we do not store any of your data. Your configuration settings are stored locally in your browser. The only data that leaves your browser is the text or URL you wish to translate, which is sent directly to the Kagi Translate service for processing. We do not collect or store any personally identifiable information.
 
+Please note that the Kagi service has its own privacy policy, which can be reviewed at <https://kagi.com/privacy>.
+
 4. Contact Us
 
-If you have any questions about this Privacy Policy, please contact us at [Insira seu e-mail ou link de contato aqui].
+If you have any questions about this Privacy Policy, please contact us at <contact@lombello.com>
